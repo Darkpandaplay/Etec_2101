@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\scratch\main.cpp">
+    <ClCompile Include="..\..\src\OOP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Scratch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

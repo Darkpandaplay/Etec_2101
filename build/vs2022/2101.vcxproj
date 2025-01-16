@@ -14,7 +14,8 @@
     <ClInclude Include="..\..\include\examples\person.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\scratch\main.cpp" />
+    <ClCompile Include="..\..\src\OOP.cpp" />
+    <ClCompile Include="..\..\src\Scratch.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -22,9 +22,19 @@ private:
     unsigned int hours_worked;
 
 public:
+    Person();
+    //This CONSTRUCTOR -- method that has no return type must have same name as class.This is a OVERLOAD (Alternate Constuctor)
+    Person(int start_id, std::string start_fname, std::string start_lname);
     // This is a METHOD -- a function that all instances of the class can
     // use.  This is a DECLARATION.  
     float calculate_pay();
+    //This CONSTRUCTOR -- method that has no return type must have same name as class.This is a DEFAULT CONSTRUCTOR (NO PARAMETERS)
+    // This is a METHOD -- a function that all instances of the class can
+    // use.  This is a DECLARATION.
+
+    int get_id();
+    void set_hourly_rate(float new_rate);
+    void set_hours_worked(unsigned int new_hours);
 };
 
 #endif
