@@ -1,2 +1,2 @@
 # Etec_2101
-JASHION CLASS WORK!
+This is my Etec 2101 Database class work.
