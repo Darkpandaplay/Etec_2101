@@ -74,3 +74,8 @@ Person::Person(int start_id, std::string start_fname, std::string start_lname)
 	hours_worked = 0;
 	hourly_rate = 0.0f;
 }
+
+Person::~Person()
+{
+	std::cout << "The person named " << first_name << " " << last_name << " is about to go away.\n";
+}

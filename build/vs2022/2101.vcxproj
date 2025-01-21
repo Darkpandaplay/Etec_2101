@@ -15,7 +15,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\include\examples\person.cpp" />
-    <ClCompile Include="..\..\src\OOP.cpp" />
+    <ClCompile Include="stream_example.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
