@@ -18,7 +18,7 @@
     <ClCompile Include="..\..\src\OOP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Scratch.cpp">
+    <ClCompile Include="..\..\include\examples\person.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

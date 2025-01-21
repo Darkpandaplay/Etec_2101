@@ -1,6 +1,6 @@
 // person.cpp -- houses the BODIES (DEFINITIONS) of all methods
 #include <person.h>
-
+#include <iostream>
 // General structure:     ReturnType ClassName::MethodName(PARAMETERS) { .... }
 
 float Person::calculate_pay()
