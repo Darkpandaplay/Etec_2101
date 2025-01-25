@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>     // access to FILE input/output
+#include <iomanip>
 
 #define DO_FILE_OUTPUT 0
 
@@ -62,6 +63,7 @@ int main(int argc, char** argv)
 	std::getline(fp, temp_line);
 	std::cout << "Line0=" << temp_line << "\n";
 
+	/*
 	// Line2 is of the form "x = 99" -- how to get the number?
 	fp.ignore(4, '\n');
 	int real_x;
@@ -71,6 +73,25 @@ int main(int argc, char** argv)
 
 	std::getline(fp, temp_line);
 	std::cout << "Line2=" << temp_line << "\n";
+	*/
+	int new_id;
+	float new_rate;
+	unsigned int new_hours;
+	std::string new_fname, new_lname;
+
+	std::cout << std::fixed << std::setprecision(2);
+	while (true)
+	{
+		fp >> new_id >> new_fname >> new_lname >> new_rate >> new_hours;
+		if (fp.fail())
+			std::cout << "Error reading in data\n";
+		if (fp.eof())
+			break;
+
+		std::cout << "Got person\n\tid=" << new_id << "\n\tfname'" << new_fname;
+		std::cout << "'\n\tlname='" << new_lname << "'\n\trate=$" << new_rate << "\n\thours=" << new_hours << "\n";
+
+	}
 
 	fp.close();
 #endif

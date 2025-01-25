@@ -4,7 +4,10 @@
 					  //   class declaration) is only seen once by the
 					  //   compiler
 #include <string>
-
+/// <summary>
+/// This Person class is an example of OOP techniques. Used for projects
+/// (PersonDatabase) and as a test of a "complex" things ()
+/// </summary>
 class Person
 {
 	// These are ATTRIBUTES -- variables that each instance of the class
@@ -13,6 +16,9 @@ class Person
 	//   access them in a method).  Normally we make our attributes private
 	//   but methods public.
 private:
+	/// <summary>
+	/// This is the (unique) ID# of the person
+	/// </summary>
 	int id;
 	std::string first_name;
 	std::string last_name;
@@ -22,9 +28,20 @@ private:
 public:
 	// This is the CONSTRUCTOR -- a method that has no return type and MUST 
 	// have the same name as the class.  This is a DEFAULT CONSTRUCTOR (no parameters)
+
+	/// <summary>
+	/// DEFAULT CONSTRUCTOR (no parmeters)
+	/// </summary>
 	Person();
 
 	// This is ANOTHER CONSTRUCTOR (this is an OVERLOAD...alternate version) of the constructor
+	
+	/// <summary>
+	/// Non-DEFAULT constructor based on arguments from the caller
+	/// </summary>
+	/// <param name="start_id">This is the ID param for rhe new person</param>
+	/// <param name="start_fname">First name for the new person</param>
+	/// <param name="start_lname">Last name for the new person</param>
 	Person(int start_id, std::string start_fname, std::string start_lname);
 
 	// This is the DESTRUCTOR.  This is called when an instance is about to go "away",

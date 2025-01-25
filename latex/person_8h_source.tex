@@ -1,0 +1,61 @@
+\doxysection{person.\+h}
+\hypertarget{person_8h_source}{}\label{person_8h_source}\index{include/examples/person.h@{include/examples/person.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ \#pragma\ once\ \ \ \ \ \ \ //\ does\ the\ same\ compiler\ guard\ as\ below}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ \_PERSON\_H\_\ \ \ \ }\textcolor{comment}{//\ "{}compiler\ guard"{}\ -\/-\/\ makes\ sure\ this}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ \_PERSON\_H\_\ \ \ \ }\textcolor{comment}{//\ \ \ header\ file\ (and\ the\ stuff\ within\ it...our}}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ class\ declaration)\ is\ only\ seen\ once\ by\ the}}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ compiler}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_person_a0397c6f89fafc12e738923f612bc41a3}{Person}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ These\ are\ ATTRIBUTES\ -\/-\/\ variables\ that\ each\ instance\ of\ the\ class}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ gets\ a\ copy\ of.}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ By\ default\ all\ members\ of\ a\ class\ are\ PRIVATE\ (we\ can\ only}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ \ \ access\ them\ in\ a\ method).\ \ Normally\ we\ make\ our\ attributes\ private}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ \ \ but\ methods\ public.}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ first\_name;}
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ last\_name;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ hourly\_rate;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ hours\_worked;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ This\ is\ the\ CONSTRUCTOR\ -\/-\/\ a\ method\ that\ has\ no\ return\ type\ and\ MUST\ }}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ have\ the\ same\ name\ as\ the\ class.\ \ This\ is\ a\ DEFAULT\ CONSTRUCTOR\ (no\ parameters)}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_person_a0397c6f89fafc12e738923f612bc41a3}{Person}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ This\ is\ ANOTHER\ CONSTRUCTOR\ (this\ is\ an\ OVERLOAD...alternate\ version)\ of\ the\ constructor}}
+\DoxyCodeLine{00038\ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_person_a0397c6f89fafc12e738923f612bc41a3}{Person}}(\textcolor{keywordtype}{int}\ start\_id,\ std::string\ start\_fname,\ std::string\ start\_lname);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ This\ is\ the\ DESTRUCTOR.\ \ This\ is\ called\ when\ an\ instance\ is\ about\ to\ go\ "{}away"{},}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ This\ method\ gets\ called.\ \ It\ is\ unusual\ to\ call\ this\ manually.\ \ More\ often,\ it's}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ called\ when\ an\ instance\ goes\ out\ of\ scope\ (scope\ is\ where\ that\ variable\ is\ visible,\ or}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ is\ defined).\ \ Do\ any\ kind\ of\ cleanup\ you\ wish.\ \ Biggie:\ if\ you\ dynamically\ allocated}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ any\ memory,\ this\ is\ a\ good\ place\ to\ clean\ it\ up.}}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_person_a0397c6f89fafc12e738923f612bc41a3}{\string~Person}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ This\ is\ a\ METHOD\ -\/-\/\ a\ function\ that\ all\ instances\ of\ the\ class\ can}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ use.\ \ This\ is\ a\ DECLARATION.\ \ }}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{float}\ calculate\_pay();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ These\ are\ examples\ of\ SETTERS}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_hourly\_rate(\textcolor{keywordtype}{float}\ new\_rate);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_hours\_worked(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ new\_hours);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ These\ are\ examples\ of\ GETTERS}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ get\_id();}
+\DoxyCodeLine{00064\ \ \ \ \ std::string\ get\_first\_name();}
+\DoxyCodeLine{00065\ \ \ \ \ std::string\ get\_last\_name();}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ get\_hours\_worked();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{float}\ get\_hourly\_rate();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

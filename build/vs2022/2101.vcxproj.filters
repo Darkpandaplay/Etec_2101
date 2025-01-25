@@ -18,6 +18,9 @@
     <ClCompile Include="..\..\include\examples\person.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="stream_example.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\examples\person.h">
