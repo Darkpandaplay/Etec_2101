@@ -19,7 +19,17 @@ namespace example
 		/// <summary>
 		/// 
 		/// </summary>
-		/// <param name="fname"></param>
+		/// <param name="fname">First name of a person</param>
 		PersonDatabase(std::string fname);
+		/// <summary>
+		/// Will give the current size of the person array
+		/// </summary>
+		unsigned int person_array_size;    // like "n" on slide 16
+		/// <summary>
+		/// Should add the new Person object to the array
+		/// </summary>
+		/// <param name="new_person">new Person object</param>
+		void add_person(Person new_person);
 	};
-}
+};
+#endif

@@ -5,12 +5,12 @@
 
 example::personDatabase::PersonDatabase(std::string fname)
 {
-	person_array = nullptr;
+	person_array = nullptr; // Indicates that the array is empty
 	while (true)
 	{
 		if (fp.eof())
 			break;
-
-		person
+		example::Person p()
+		add_person(p);
 	}
 }

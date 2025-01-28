@@ -1,16 +1,17 @@
 // person.cpp -- houses the BODIES (DEFINITIONS) of all methods
 #include <person.h>
 #include <iostream>
+
 // General structure:     ReturnType ClassName::MethodName(PARAMETERS) { .... }
 
-float Person::calculate_pay()
+float example::Person::calculate_pay()
 {
 	// We have access to all attributes since we're a part of the class
 	return hourly_rate * hours_worked;
 }
 
 
-void Person::set_hourly_rate(float new_rate)
+void example::Person::set_hourly_rate(float new_rate)
 {
 	// Imagine that we COULD do data validation rules to make sure new_rate
 	// makes sense (according to company policy) before assigning it.  
@@ -19,44 +20,44 @@ void Person::set_hourly_rate(float new_rate)
 }
 
 
-void Person::set_hours_worked(unsigned int new_hours)
+void example::Person::set_hours_worked(unsigned int new_hours)
 {
 	hours_worked = new_hours;
 }
 
 
 
-int Person::get_id()
+int example::Person::get_id()
 {
 	return id;
 }
 
 
-std::string Person::get_first_name()
+std::string example::Person::get_first_name()
 {
 	return first_name;
 }
 
 
-std::string Person::get_last_name()
+std::string example::Person::get_last_name()
 {
 	return last_name;
 }
 
 
-float Person::get_hourly_rate()
+float example::Person::get_hourly_rate()
 {
 	return hourly_rate;
 }
 
 
-unsigned int Person::get_hours_worked()
+unsigned int example::Person::get_hours_worked()
 {
 	return hours_worked;
 }
 
 
-Person::Person()
+example::Person::Person()
 {
 	id = -1;
 	first_name = "?";
@@ -66,7 +67,7 @@ Person::Person()
 }
 
 
-Person::Person(int start_id, std::string start_fname, std::string start_lname)
+example::Person::Person(int start_id, std::string start_fname, std::string start_lname)
 {
 	id = start_id;
 	first_name = start_fname;
@@ -75,7 +76,8 @@ Person::Person(int start_id, std::string start_fname, std::string start_lname)
 	hourly_rate = 0.0f;
 }
 
-Person::~Person()
+
+example::Person::~Person()
 {
 	std::cout << "The person named " << first_name << " " << last_name << " is about to go away.\n";
 }
