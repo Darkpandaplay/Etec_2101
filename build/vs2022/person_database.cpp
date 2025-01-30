@@ -11,7 +11,7 @@ example::PersonDatabase::PersonDatabase(std::string fname)
 	{
 		if (fp.eof())
 			break;
-		example::Person p();
+		example::Person p;
 		add_person(p);
 	}
 }
