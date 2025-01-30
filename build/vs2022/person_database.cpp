@@ -3,14 +3,19 @@
 #include <string>
 #include <person_database.h>
 
-example::personDatabase::PersonDatabase(std::string fname)
+example::PersonDatabase::PersonDatabase(std::string fname)
 {
+	std::fstream fp(fname);
 	person_array = nullptr; // Indicates that the array is empty
 	while (true)
 	{
 		if (fp.eof())
 			break;
-		example::Person p()
+		example::Person p();
 		add_person(p);
 	}
+}
+void example::PersonDatabase::add_person(Person new_person)
+{
+
 }

@@ -10,13 +10,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\include\examples\person.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\include\examples\person.cpp" />
-    <ClCompile Include="stream_example.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
