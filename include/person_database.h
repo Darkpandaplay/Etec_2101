@@ -30,6 +30,7 @@ namespace example
 		/// </summary>
 		/// <param name="new_person">new Person object</param>
 		void add_person(Person new_person);
+		bool remove_person(unsigned int id_to_remove)
 	};
 };
 #endif
