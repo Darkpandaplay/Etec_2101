@@ -24,7 +24,7 @@ namespace example
 		/// <summary>
 		/// Will give the current size of the person array
 		/// </summary>
-		unsigned int person_array_size;    // like "n" on slide 16
+		unsigned int person_array_size();    // like "n" on slide 16
 		/// <summary>
 		/// Should add the new Person object to the array
 		/// </summary>
@@ -35,6 +35,11 @@ namespace example
 		/// </summary>
 		/// /// <param name="id_to_remove">id object in the list</param>
 		bool remove_person(unsigned int id_to_remove);
+		/// <summary>
+		/// Turns person array into a string
+		/// </summary>
+		/// <param name="file">file containing person array information</param>
+		std::string to_string(std::string file);
 	};
 };
 #endif
