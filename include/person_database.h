@@ -24,7 +24,7 @@ namespace example
 		/// <summary>
 		/// Will give the current size of the person array
 		/// </summary>
-		unsigned int person_array_size();    // like "n" on slide 16
+		unsigned int person_array_size;    // like "n" on slide 16
 		/// <summary>
 		/// Should add the new Person object to the array
 		/// </summary>
