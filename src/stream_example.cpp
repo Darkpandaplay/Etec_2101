@@ -52,15 +52,15 @@ int main(int argc, char** argv)
 #else
 
 	// FILE INPUT
-	std::ifstream fp("..\\..\\media\\test.txt");
-	if (!fp.is_open())
+	std::ifstream fpoio("..\\..\\media\\test.txt");
+	if (!fpoio.is_open())
 	{
 		std::cout << "Error opening ..\\..\\media\\test.txt \n";
 		return 1;
 	}
 
 	std::string temp_line;
-	std::getline(fp, temp_line);
+	std::getline(fpoio, temp_line);
 	std::cout << "Line0=" << temp_line << "\n";
 
 	/*
@@ -82,10 +82,10 @@ int main(int argc, char** argv)
 	std::cout << std::fixed << std::setprecision(2);
 	while (true)
 	{
-		fp >> new_id >> new_fname >> new_lname >> new_rate >> new_hours;
-		if (fp.fail())
+		fpoio >> new_id >> new_fname >> new_lname >> new_rate >> new_hours;
+		if (fpoio.fail())
 			std::cout << "Error reading in data\n";
-		if (fp.eof())
+		if (fpoio.eof())
 			break;
 
 		std::cout << "Got person\n\tid=" << new_id << "\n\tfname'" << new_fname;
@@ -93,7 +93,7 @@ int main(int argc, char** argv)
 
 	}
 
-	fp.close();
+	fpoio.close();
 #endif
 
 	return 0;
