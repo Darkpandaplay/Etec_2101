@@ -18,13 +18,7 @@
     <ClCompile Include="Lab_4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lab2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\include\examples\person.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Lab_1\lab03_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
