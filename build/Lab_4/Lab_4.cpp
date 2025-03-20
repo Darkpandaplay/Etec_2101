@@ -43,7 +43,7 @@ std::string WordReader::extracto()
 	fp.seekg(-1, std::ios::cur);
 
 	char boo = fp.peek();
-	while (boo == '11')
+	while (boo == ' ')
 	{
 		fp.seekg(0, std::ios::cur);
 		boo = fp.peek();
