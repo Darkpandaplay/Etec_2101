@@ -146,6 +146,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\include\examples\person.cpp" />
     <ClCompile Include="Lab_4.cpp" />
+    <ClCompile Include="WordReader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\examples\array_list.h" />
