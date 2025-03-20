@@ -44,6 +44,10 @@ int main(int argc, char** argv)
 	sf::CircleShape test_circle(100.0f);
 	ssuds::ArrayList<float> circle_xlist;
 	ssuds::ArrayList<float> circle_ylist;
+
+	ssuds::ArrayList<float> bullet_ylist;
+	ssuds::ArrayList<float> bullet_xlist;
+
 	ssuds::ArrayList<std::string> circle_strings;
 	test_circle.setFillColor(sf::Color(200, 255, 100, 255));
 	test_circle.setPosition(sf::Vector2f(150.0f, 10.0f));
