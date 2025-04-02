@@ -1,81 +1,92 @@
-// person.cpp -- houses the BODIES (DEFINITIONS) of all methods
 #include <person.h>
-#include <iostream>
-// General structure:     ReturnType ClassName::MethodName(PARAMETERS) { .... }
 
-float Person::calculate_pay()
+example::Person::Person()
 {
-	// We have access to all attributes since we're a part of the class
-	return hourly_rate * hours_worked;
-}
-
-
-void Person::set_hourly_rate(float new_rate)
-{
-	// Imagine that we COULD do data validation rules to make sure new_rate
-	// makes sense (according to company policy) before assigning it.  
-	// We can also set breakpoints here to DETECT any time a change is made
-	hourly_rate = new_rate;
-}
-
-
-void Person::set_hours_worked(unsigned int new_hours)
-{
-	hours_worked = new_hours;
+	mFirstName = mLastName = "???";
+	mID = 0;
+	mHoursWorked = 0;
+	mHourlyRate = 0.0f;
 }
 
 
 
-int Person::get_id()
+example::Person::~Person()
 {
-	return id;
+	// Nothing to do here...just a place-holder for the moment.
 }
 
 
-std::string Person::get_first_name()
+
+example::Person::Person(const std::string& starting_fname, const std::string& starting_lname, unsigned int id, float starting_rate) :
+	mFirstName(starting_fname), mLastName(starting_lname), mID(id), mHourlyRate(starting_rate),
+	mHoursWorked(0)
 {
-	return first_name;
+	// Note the alternate syntax used to initialize our attributes.  Sometimes this notation is necessary
+	// since it assigns a value AS the attributes are created (the other version creates them, then
+	// overwrites the values stored).  This method is usually faster.
+
+	// Nothing to do here!
+}
+
+std::string example::Person::get_first_name()
+{
+	return mFirstName;
 }
 
 
-std::string Person::get_last_name()
+
+std::string example::Person::get_last_name()
 {
-	return last_name;
+	return mLastName;
 }
 
 
-float Person::get_hourly_rate()
+
+
+unsigned int example::Person::get_id()
 {
-	return hourly_rate;
+	return mID;
 }
 
 
-unsigned int Person::get_hours_worked()
+
+int example::Person::get_hours_worked()
 {
-	return hours_worked;
+	return mHoursWorked;
 }
 
 
-Person::Person()
+
+float example::Person::get_rate()
 {
-	id = -1;
-	first_name = "?";
-	last_name = "?";
-	hours_worked = 0;
-	hourly_rate = 0.0f;
+	return mHourlyRate;
 }
 
 
-Person::Person(int start_id, std::string start_fname, std::string start_lname)
+
+void example::Person::set_hours_worked(int new_hours)
 {
-	id = start_id;
-	first_name = start_fname;
-	last_name = start_lname;
-	hours_worked = 0;
-	hourly_rate = 0.0f;
+	mHoursWorked = new_hours;
 }
 
-Person::~Person()
+
+
+// Note how you don't put the default value here (it's in the .h file)
+std::string example::Person::get_name(bool reversed)
 {
-	std::cout << "The person named " << first_name << " " << last_name << " is about to go away.\n";
+	if (reversed)
+		return mLastName + ", " + mFirstName;
+	else
+		return mFirstName + " " + mLastName;
+}
+
+
+
+
+float example::Person::get_salary(bool reset)
+{
+	int h = mHoursWorked;
+	if (reset)
+		mHoursWorked = 0;
+	return mHourlyRate * h;
 }
