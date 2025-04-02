@@ -12,7 +12,7 @@ int main(int args, char** argv) {
     std::ofstream fp("../../media/results.csv");
     fp << "array size, create-time(ns), shuffle-time(ns), copy-time(ns), save-time(ns), quicksort-time(ms), bubblesort-time(ms), binarysearch-time(ms), linearsearch-time(ms)\n";
 
-    for (int sample_size = 1000; sample_size < 10000; sample_size += 5000) {
+    for (int sample_size = 1000; sample_size < 20000; sample_size += 5000) {
         fp << sample_size << ", ";
 
         // CREATE
