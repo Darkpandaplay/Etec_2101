@@ -104,4 +104,47 @@ namespace ssuds
             throw std::runtime_error("List must be in ascending or descending order");
         }
     }
+    
+    template <typename T>
+    std::pair<int, int> partition(ArrayList<T>& listo, int left_index, int right_index, sort_order order) {
+        int mid_index = (left_index + right_index) / 2;
+        T pivot_value = listo[mid_index];
+        std::swap(listo[mid_index], listo[right_index]);
+        int num_swap = 1;
+        int swap_index = left_index;
+
+        auto compare = [&](const T& a, const T& b) {
+            if (order == sort_order::ASCENDING) return a <= b;
+            if (order == sort_order::DESCENDING) return a >= b;
+            throw std::runtime_error("Invalid sort order");
+            };
+
+        for (int i = left_index; i <= right_index; ++i) {
+            if (compare(listo[i], pivot_value)) {
+                std::swap(listo[i], listo[swap_index]);
+                num_swap++;
+                swap_index++;
+            }
+        }
+        return { swap_index - 1, num_swap };
+    }
+
+    template <typename T>
+    int quick_sort(ArrayList<T>& my_list, int left_index, int right_index, sort_order order)
+    {
+        int num_swap = 0;
+        if (left_index >= right_index)
+        {
+            return num_swap;
+        }
+
+        std::pair temp = std::make_pair(0, 0);
+        temp = partition<T>(my_list, left_index, right_index, order);
+        int pivot_index = temp.first;
+        num_swap += temp.second;
+        num_swap += quick_sort<T>(my_list, left_index, pivot_index - 1, order);
+        num_swap += quick_sort<T>(my_list, pivot_index + 1, right_index, order);
+    }
+
+
 }

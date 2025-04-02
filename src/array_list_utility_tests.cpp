@@ -34,3 +34,19 @@ TEST(ALUTest, binary_search)
 	index = ssuds::binary_search(flist, 1.1f, ssuds::sort_order::DESCENDING);
 	EXPECT_EQ(index, 4);
 }
+
+TEST(ALUTest, quick_sort)
+{
+	ssuds::ArrayList<float> flist = { 4.5f,2.1f,2.8f,3.8f,2.0f,0.1f,1.6f,3.2f };
+	int num_swaps = ssuds::quick_sort(flist, 0, 7, ssuds::sort_order::ASCENDING);
+	std::cout << "\n" << num_swaps << "\n";
+	std::cout << flist << "\n";
+	EXPECT_EQ(flist[0], 0.1f);
+	EXPECT_EQ(flist[1], 1.6f);
+	EXPECT_EQ(flist[2], 2.0f);
+	EXPECT_EQ(flist[3], 2.1f);
+	EXPECT_EQ(flist[4], 2.8f);
+	EXPECT_EQ(flist[5], 3.2f);
+	EXPECT_EQ(flist[6], 3.8f);
+	EXPECT_EQ(flist[7], 4.5f);
+}

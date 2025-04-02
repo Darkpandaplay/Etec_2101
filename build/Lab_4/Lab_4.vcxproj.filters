@@ -21,9 +21,6 @@
     <ClCompile Include="Lab-5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\MAIN_TESTS.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\array_list_utility_tests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

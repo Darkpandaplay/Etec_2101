@@ -147,7 +147,6 @@
   <ItemGroup>
     <ClCompile Include="..\..\include\examples\person.cpp" />
     <ClCompile Include="..\..\src\array_list_utility_tests.cpp" />
-    <ClCompile Include="..\..\src\MAIN_TESTS.cpp" />
     <ClCompile Include="Lab-5.cpp" />
   </ItemGroup>
   <ItemGroup>
